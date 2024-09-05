@@ -24,11 +24,12 @@ Explain the key points or steps in the project.
 
 ---
 
-## Supplementary
-# Gaussian Process based representation 
+# Supplementary
+## Gaussian Process based representation 
 
 In this section, we will discuss the Gaussian Process (GP) based representation of the data. 
-As a matter of fact, GP-based representation are widely used and could serve as a way of combining mechanical and visual properties. For a formal introduction to GP, we refer the reader to [1].
+As a matter of fact, GP-based representation are widely used and could serve as a way of combining mechanical and visual properties. For a formal introduction to GP, we refer the reader to [[1](#1)].
+
 
 ---
 
