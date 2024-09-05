@@ -1,8 +1,8 @@
 # A Cross-Task Visuo-Tactile Representation Using Point Clouds
-### *by Giammarco Caroleo[^1], Alessandro Albini, and Perla Maiolino*
+### *by Giammarco Caroleo^1^, Alessandro Albini, and Perla Maiolino*
 
 This page is currently including the abstract of the paper (under review), the outline of the project, and supplementary analyses.
-[^1]: Corresponding author email: giammarco@robots.ox.ac.uk
+^1^: Corresponding author email: giammarco@robots.ox.ac.uk
 ## Table of Contents
 
 1. [Abstract](#abstract)
