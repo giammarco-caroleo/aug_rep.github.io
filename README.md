@@ -33,7 +33,7 @@ As a matter of fact, GP-based representation are widely used and could serve as 
 
 Having a tactile PC, we train a GP to learn a mapping between the geometric feature and the tactile colour. Having this model, we predict the tactile colour for the points belonging to the visual PC. Given the limited amount of tactile points, the resulting augmented representation fails to extend the tactile colour. As a matter of fact, the resulting PC has a tactile colour that smoothly varies from the plastic cap to the bottom in a linear fashion as if the model overfits the geometrical feature rather than fitting the tactile properties. In [Figure 1](#Figure1) it can be seen that the tactile colour is spread such that points on the top are darker and points on the bottom have a lighter colour associated with them. As expressed in the letter, since a holder is used to keep the object in place, the bottle is expected to be less compliant also at the bottom. This entails that the trained GP model disregards the tactile readings.  
 
-<div id=Figure1 align="center">
+<div align="center">
 
 ![Figure 1](./images/gp_fail.png) 
 *Fig. 1: GP-based representation of the empty bottle.*
@@ -42,7 +42,7 @@ Having a tactile PC, we train a GP to learn a mapping between the geometric feat
 
 This issue is likely related to the limited amount of data the model is trained on. Indeed, to further prove this, we artificially increased the tactile PC and re-trained the model. To this end, we searched for the points in the visual PC belonging to a 3 cm neighbourhood of each point of the tactile PC. This way we increase the number of points of the tactile PC and obtain a bigger number of training samples. We chose this size for the radius as it is approximately the size of the tactile sensor and, for this analysis, we assumed that all the points touched by the sensor have the same physical properties. Then, we generated the GP-based augmented representation and got a result that is very similar to the smooth representation as can be seen in [Figure 2](#Figure2). 
 
-<div id=Figure2 align="center">
+<div align="center">
 
 ![Figure 2](./images/gp_132sec.png)
 *Fig. 2: GP-based representation of the empty bottle using an artificially increased tactile PC.*
@@ -58,7 +58,7 @@ In conclusion TBD, the GP-based representation is a powerful tool that can be us
 
 ## References
 <a id="1"></a>
-1. https://www.cyskin.com/
+1. [https://www.cyskin.com/](https://www.cyskin.com/)
 <a id="2"></a>
 2. C. R. Qi, H. Su, K. Mo, and L. J. Guibas, “Pointnet: Deep learning on point sets for 3d classiﬁcation and segmentation,” in Proceedings of the IEEE conference on computer vision and pattern recognition, 2017, pp. 652–660.
 <a id="3"></a>
