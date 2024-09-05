@@ -19,7 +19,7 @@ The combination of visual and tactile cues has proved to be effective for object
 
 # Outline
 
-In the manuscript, we present a cross-task representation that leverages the point cloud (PC) data structure to encode visuo-tactile cues. In particular, a PC acquired with RGB-D cameras is used to represent the geometry of the objects, while tactile sensing ([Cyskin](https://www.cyskin.com/) [[1](#1.)]) is used to augment it  with physical information embedded in the color assigned to the cloud. Specifically, we use this representation to encode the compliance distribution across the whole object’s surface. We showed how the proposed representation can be used to enhance robot abilities across different tasks, such as object classification, by using directly a state-of-the-art classifier like [PointNet](https://github.com/charlesq34/pointnet) [[2](#2.)], and control tasks including path following, and reaching in clutter.
+In the manuscript, we present a cross-task representation that leverages the point cloud (PC) data structure to encode visuo-tactile cues. In particular, a PC acquired with RGB-D cameras is used to represent the geometry of the objects, while tactile sensing ([Cyskin](https://www.cyskin.com/) [![1](#1.)]) is used to augment it  with physical information embedded in the color assigned to the cloud. Specifically, we use this representation to encode the compliance distribution across the whole object’s surface. We showed how the proposed representation can be used to enhance robot abilities across different tasks, such as object classification, by using directly a state-of-the-art classifier like [PointNet](https://github.com/charlesq34/pointnet) [![2](#2.)], and control tasks including path following, and reaching in clutter.
 
 This work was supported by the [SESTOSENSO](http://sestosenso.eu/) project (HORIZON EUROPE Research and Innovation Actions under GA number 101070310).
 
@@ -29,7 +29,7 @@ This work was supported by the [SESTOSENSO](http://sestosenso.eu/) project (HORI
 ## Gaussian Process based representation 
 
 In this section, we will discuss the Gaussian Process (GP) based representation of the data. 
-As a matter of fact, GP-based representation are widely used and could serve as a way of combining mechanical and visual properties. For a formal introduction to GP, we refer the reader to [[3](#3.)]. Here, we will discuss how the GP-based representation can be used to encode the local compliance of the object's surface. The analysis that follows assumes that the reader is familiar with the concept of GP, the point cloud (PC) data structure, and has read the main manuscript.
+As a matter of fact, GP-based representation are widely used and could serve as a way of combining mechanical and visual properties. For a formal introduction to GP, we refer the reader to [![3](#3)]. Here, we will discuss how the GP-based representation can be used to encode the local compliance of the object's surface. The analysis that follows assumes that the reader is familiar with the concept of GP, the point cloud (PC) data structure, and has read the main manuscript.
 
 Having a tactile PC, we train a GP to learn a mapping between the geometric feature and the tactile colour. Having this model, we predict the tactile colour for the points belonging to the visual PC. Given the limited amount of tactile points, the resulting augmented representation fails to extend the tactile colour. As a matter of fact, the resulting PC has a tactile colour that smoothly varies from the plastic cap to the bottom in a linear fashion as if the model overfits the geometrical feature rather than fitting the tactile properties. In [Figure 1](#Figure1) it can be seen that the tactile colour is spread such that points on the top are darker and points on the bottom have a lighter colour associated with them. As expressed in the letter, since a holder is used to keep the object in place, the bottle is expected to be less compliant also at the bottom. This entails that the trained GP model disregards the tactile readings.  
 
@@ -57,6 +57,6 @@ In conclusion TBD, the GP-based representation is a powerful tool that can be us
 ---
 
 ## References
-## 1. https://www.cyskin.com/
-## 2. C. R. Qi, H. Su, K. Mo, and L. J. Guibas, “Pointnet: Deep learning on point sets for 3d classiﬁcation and segmentation,” in Proceedings of the IEEE conference on computer vision and pattern recognition, 2017, pp. 652–660.
-## 3. C. Williams and C. Rasmussen, “Gaussian processes for regression,” Advances in neural information processing systems, vol. 8, 1995.
+1. https://www.cyskin.com/
+2. C. R. Qi, H. Su, K. Mo, and L. J. Guibas, “Pointnet: Deep learning on point sets for 3d classiﬁcation and segmentation,” in Proceedings of the IEEE conference on computer vision and pattern recognition, 2017, pp. 652–660.
+3. C. Williams and C. Rasmussen, “Gaussian processes for regression,” Advances in neural information processing systems, vol. 8, 1995.
