@@ -33,13 +33,17 @@ As a matter of fact, GP-based representation are widely used and could serve as 
 
 Having a tactile PC, we train a GP to learn a mapping between the geometric feature and the tactile colour. Having this model, we predict the tactile colour for the points belonging to the visual PC. Given the limited amount of tactile points, the resulting augmented representation fails to extend the tactile colour. As a matter of fact, the resulting PC has a tactile colour that smoothly varies from the plastic cap to the bottom in a linear fashion as if the model overfits the geometrical feature rather than fitting the tactile properties. In [Figure 1](#Figure 1) it can be seen that the tactile colour is spread such that points on the top are darker and points on the bottom have a lighter colour associated with them. As expressed in the letter, since a holder is used to keep the object in place, the bottle is expected to be less compliant also at the bottom. This entails that the trained GP model disregards the tactile readings.  
 
+<div align="center">
 ![Figure 1](./images/gp_fail.png)
 *Fig. 1: GP-based representation of the empty bottle.*
+</div>
 
 This issue is likely related to the limited amount of data the model is trained on. Indeed, to further prove this, we artificially increased the tactile PC and re-trained the model. To this end, we searched for the points in the visual PC belonging to a 3 cm neighbourhood of each point of the tactile PC. This way we increase the number of points of the tactile PC and obtain a bigger number of training samples. We chose this size for the radius as it is approximately the size of the tactile sensor and, for this analysis, we assumed that all the points touched by the sensor have the same physical properties. Then, we generated the GP-based augmented representation and got a result that is very similar to the smooth representation as can be seen in [Figure 2](#Figure 2). 
 
+<div align="center">
 ![Figure 2](./images/gp_132sec.png)
 *Fig. 2: GP-based representation of the empty bottle using an artificially increased tactile PC.*
+</div>
 
 The generation of the augmented representation in this case is highly computationally intensive and heavily depends on the number of points of the tactile PC. In this case, once the neighbouring points were found, the artificially increased PC was downsampled otherwise the training of the GP model would have been unfeasible (given the memory capabilities of the laptop used for this work). The voxel size was varied and the best representation (Fig. 2) was obtained with a voxel size of 0.004 m. This way the computation takes ~132 seconds and yields a result that is comparable to the smooth representation which conversely takes ~6.5 seconds and is way less memory-intensive. 
 The computation efficiency could have been improved if a smaller radius was used for the neighbour search. However, it is evident that this approach needs further analysis since more hyperparameters are involved and is not justified from a computational point of view even considering that the results are similar to the ones obtained with the other more efficient representations. 
