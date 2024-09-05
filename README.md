@@ -21,7 +21,7 @@ The combination of visual and tactile cues has proved to be effective for object
 
 In the manuscript, we present a cross-task representation that leverages the point cloud (PC) data structure to encode visuo-tactile cues. In particular, a PC acquired with RGB-D cameras is used to represent the geometry of the objects, while tactile sensing ([Cyskin](https://www.cyskin.com/)) is used to augment it  with physical information embedded in the color assigned to the cloud. Specifically, we use this representation to encode the compliance distribution across the whole object’s surface. We showed how the proposed representation can be used to enhance robot abilities across different tasks, such as object classification, by using directly a state-of-the-art classifier like [PointNet](https://github.com/charlesq34/pointnet), and control tasks including path following, and reaching in clutter.
 
-This work was supported by he SESTOSENSO (HORIZON EUROPE Research and Innovation Actions under GA number 101070310).
+This work was supported by he [SESTOSENSO](http://sestosenso.eu/) (HORIZON EUROPE Research and Innovation Actions under GA number 101070310).
 
 ---
 
