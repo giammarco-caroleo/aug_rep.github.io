@@ -2,7 +2,8 @@
 ### *by Giammarco Caroleo<sup>1</sup>, Alessandro Albini, and Perla Maiolino*
 
 This page is currently including the abstract of the paper (under review), the outline of the project, and supplementary analyses.
-1: Corresponding author email: giammarco@robots.ox.ac.uk
+
+<small>1: Corresponding author email: giammarco@robots.ox.ac.uk</small>
 ## Table of Contents
 
 1. [Abstract](#abstract)
