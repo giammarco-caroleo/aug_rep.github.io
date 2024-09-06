@@ -1,9 +1,8 @@
 # A Cross-Task Visuo-Tactile Representation Using Point Clouds
-### *by Giammarco Caroleo<sup>1</sup>, Alessandro Albini, and Perla Maiolino*
+### *by Giammarco Caroleo<sup>[1](#corresponding)</sup>, Alessandro Albini, and Perla Maiolino*
 
 This page is currently including the abstract of the paper (under review), the outline of the project, and supplementary analyses.
 
-<small>1: Corresponding author email: giammarco@robots.ox.ac.uk</small>
 ## Table of Contents
 
 1. [Abstract](#abstract)
@@ -63,3 +62,7 @@ In conclusion, even though the GP-based representation may also serve as a tool 
 2. C. R. Qi, H. Su, K. Mo, and L. J. Guibas, “Pointnet: Deep learning on point sets for 3d classiﬁcation and segmentation,” in Proceedings of the IEEE conference on computer vision and pattern recognition, 2017, pp. 652–660.
 <a id="3"></a>
 3. C. Williams and C. Rasmussen, “Gaussian processes for regression,” Advances in neural information processing systems, vol. 8, 1995.
+
+
+<a id=corresponding></a>
+<span style="font-size: smaller;">1: Corresponding author email: giammarco@robots.ox.ac.uk</span>
