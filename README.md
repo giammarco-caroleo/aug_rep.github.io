@@ -65,4 +65,4 @@ In conclusion, even though the GP-based representation may also serve as a tool 
 
 
 <a id=corresponding></a>
-<span style="font-size: smaller;">1: Corresponding author email: giammarco@robots.ox.ac.uk</span>
+<small><span style="color: grey;">1: Corresponding author email: giammarco@robots.ox.ac.uk</span></small>
